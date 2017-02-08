@@ -8,8 +8,10 @@ Then, all the lines containing the string "label" are flushed in order
 to create the empty SVG file ([empty.svg](empty.svg)).
 
 Both are opened in Inkscape, the document borders are adjusted to fit
-the drawing and saved as PDF. These two PDF files are then printed,
-scaled to fit the printer.
+the drawing and saved as PDF. These two PDF files
+([random-inkscape.pdf](random-inkscape.pdf),
+[empty-inkscape.pdf](empty-inkscape.pdf)) are then printed, scaled to
+fit the printer.
 
 # Gathering the samples
 
@@ -22,7 +24,7 @@ The result was scanned and resulted in a PDF containing an image. We
 extracted the image using [poppler](https://poppler.freedesktop.org/):
 `pdfimages -j scanned.pdf scan`
 
-The resulting [scan-000.bpm](../example/scan-000.bpm) was loaded
+The resulting [scan-000.bpm](../example/scan-000.pbm) was loaded
 into [Gimp](https://www.gimp.org/), rotate, cropped, and saved
 as [scan-000.png](../example/scan-000.png).
 
