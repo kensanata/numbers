@@ -18,15 +18,15 @@ fit the printer.
 The subjects are asked to fill a printout of the empty sheet with the
 random numbers matching the other printout, using a black pen of their
 own choosing, writing on a surface of their own choosing
-([scanned.pdf](../example/scanned.pdf)).
+([scanned.pdf](../alex/scanned.pdf)).
 
-The result was scanned and resulted in a PDF containing an image. We
+The result is scanned and results in a PDF containing an image. We
 extracted the image using [poppler](https://poppler.freedesktop.org/):
 `pdfimages -j scanned.pdf scan`
 
-The resulting [scan-000.bpm](../example/scan-000.pbm) was loaded
-into [Gimp](https://www.gimp.org/), rotate, cropped, and saved
-as [scan-000.png](../example/scan-000.png).
+The resulting [scan-000.bpm](../example/scan-000.pbm) (or
+scan-000.jpg) is loaded into [Gimp](https://www.gimp.org/), rotated,
+cropped, and saved as [scan-000.png](../example/scan-000.png).
 
 Then we use ImageMagick to crop the image into 20×30 roughly equally
 sized divisions, with a some border shaved off: `convert scan-000.png
@@ -58,14 +58,14 @@ The sequence is the following:
 3 9 7 2 2 6 0 2 6 1 4 2 1 1 2 8 4 9 5 7 4 0 3 8 5 5 8 8 2 5 5 9 1 3 8
 4 4 5 5 1
 
-Here's a way to organize them. First, prepare a directory structure:
-`for f in $(seq 0 9); do mkdir -p ../alex/$f; done`
+Here's a way to organize them. First, prepare a subdirectory for every
+digit: `for n in $(seq 0 9); do mkdir $n; done`
 
 Next, use the sequence above to move the files into the appropriate
-directory:
+subdirectory:
 
 ```
-f=0; for i in \
+n=0; for i in \
 6 0 9 3 7 2 9 9 5 9 7 4 3 5 0 4 0 5 2 9 7 7 8 8 1 0 1 7 6 1 7 6 9 8 4 \
 8 5 1 1 0 6 7 8 5 7 7 6 5 9 9 3 5 9 0 8 1 3 7 7 9 7 1 3 7 1 4 6 4 7 5 \
 9 4 3 9 1 3 6 5 6 0 9 0 3 2 1 0 5 9 6 3 4 9 5 0 1 8 1 0 1 5 0 1 2 7 5 \
@@ -84,7 +84,7 @@ f=0; for i in \
 4 8 9 3 8 9 8 6 5 1 2 5 7 4 9 2 0 6 0 7 3 0 4 0 6 2 3 1 7 1 1 0 4 6 6 \
 3 9 7 2 2 6 0 2 6 1 4 2 1 1 2 8 4 9 5 7 4 0 3 8 5 5 8 8 2 5 5 9 1 3 8 \
 4 4 5 5 1; do
-	mv number-$f.png ../alex/$i/
-	f=$(($f+1))
+	mv number-$n.png $i/
+	n=$(($n+1))
 done
 ```
