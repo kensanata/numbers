@@ -17,16 +17,17 @@ fit the printer.
 
 The subjects are asked to fill a printout of the empty sheet with the
 random numbers matching the other printout, using a black pen of their
-own choosing, writing on a surface of their own choosing
-([scanned.pdf](../alex/scanned.pdf)).
+own choosing, writing on a surface of their own choosing.
 
-The result is scanned and results in a PDF containing an image. We
-extracted the image using [poppler](https://poppler.freedesktop.org/):
-`pdfimages -j scanned.pdf scan`
 
-The resulting [scan-000.bpm](../example/scan-000.pbm) (or
-scan-000.jpg) is loaded into [Gimp](https://www.gimp.org/), rotated,
-cropped, and saved as [scan-000.png](../example/scan-000.png).
+The result is ([scanned](../alex/scanned.pdf) and results in a PDF
+containing an image. We extracted the image
+using [poppler](https://poppler.freedesktop.org/): `pdfimages -j
+scanned.pdf scan`
+
+The resulting [image](../alex/scan-000.png) (the format will vary) is
+loaded into [Gimp](https://www.gimp.org/), rotated, cropped,
+and [saved](../example/scan-000.png).
 
 Then we use ImageMagick to crop the image into 20×30 roughly equally
 sized divisions, with a some border shaved off: `convert scan-000.png
