@@ -16,22 +16,22 @@ fit the printer.
 # Gathering the samples
 
 The subjects are asked to fill a printout of the empty sheet with the
-random numbers matching the other printout, using a black pen of their
-own choosing, writing on a surface of their own choosing.
+numbers matching the random sheet, using a pen and writing on a
+surface of their own choosing.
 
-
-The result is ([scanned](../alex/scanned.pdf) and results in a PDF
-containing an image. We extracted the image
-using [poppler](https://poppler.freedesktop.org/): `pdfimages -j
-scanned.pdf scan`
+The result is [scanned](../alex/scanned.pdf), and if we get a PDF the
+image is extracted using [poppler](https://poppler.freedesktop.org/):
+`pdfimages -j scanned.pdf scan`
 
 The resulting [image](../alex/scan-000.png) (the format will vary) is
-loaded into [Gimp](https://www.gimp.org/), rotated, cropped,
+loaded into [Gimp](https://www.gimp.org/), rotated, aligned, cropped
 and [saved](../example/scan-000.png).
 
-Then we use ImageMagick to crop the image into 20×30 roughly equally
-sized divisions, with a some border shaved off: `convert scan-000.png
--crop "20x30@" -shave "7x7" +repage +adjoin number-%d.png`
+Then we use [ImageMagick](https://www.imagemagick.org/) to crop the
+image into 20×30 roughly equally sized divisions, with some border
+shaved off. The exact shaving depends on how inexact the aligning and
+cropping is. Sometimes 10x10 is used. `convert scan-000.png -crop
+"20x30@" -shave "7x7" +repage +adjoin number-%d.png`
 
 This will give you image files from `number-0.png` to
 `number-599.png`.
