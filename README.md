@@ -1,6 +1,6 @@
 # Numbers
 
-This repository tries to create a repositorz of handwritten digits,
+This repository tries to create a repository of handwritten digits,
 much like
 the
 [MNIST database of handwritten digits](http://yann.lecun.com/exdb/mnist/).
