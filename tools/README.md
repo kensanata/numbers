@@ -20,8 +20,13 @@ numbers matching the random sheet, using a pen and writing on a
 surface of their own choosing.
 
 The result is [scanned](../alex/scanned.pdf), and if we get a PDF the
-image is extracted using [poppler](https://poppler.freedesktop.org/):
-`pdfimages -j scanned.pdf scan`
+image is extracted using [poppler](https://poppler.freedesktop.org/).
+That's because we don't care about the PDF, we only care about the
+*image*.
+
+```
+pdfimages -j scanned.pdf scan
+```
 
 The resulting [image](../alex/scan-000.png) (the format will vary) is
 loaded into [Gimp](https://www.gimp.org/), rotated, aligned, cropped
@@ -30,8 +35,11 @@ and [saved](../example/scan-000.png).
 Then we use [ImageMagick](https://www.imagemagick.org/) to crop the
 image into 20×30 roughly equally sized divisions, with some border
 shaved off. The exact shaving depends on how inexact the aligning and
-cropping is. Sometimes 10x10 is used. `convert scan-000.png -crop
-"20x30@" -shave "7x7" +repage +adjoin number-%d.png`
+cropping is. Sometimes 10x10 is used.
+
+```
+convert scan-000.png -crop "20x30@" -shave "7x7" +repage +adjoin number-%d.png
+```
 
 This will give you image files from `number-0.png` to
 `number-599.png`.
@@ -60,7 +68,11 @@ The sequence is the following:
 4 4 5 5 1
 
 Here's a way to organize them. First, prepare a subdirectory for every
-digit: `for n in $(seq 0 9); do mkdir $n; done`
+digit:
+
+```
+for n in $(seq 0 9); do mkdir $n; done
+```
 
 Next, use the sequence above to move the files into the appropriate
 subdirectory:
