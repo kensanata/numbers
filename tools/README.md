@@ -1,3 +1,12 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+**Table of Contents**
+
+- [Generating the SVG](#generating-the-svg)
+- [Gathering the samples](#gathering-the-samples)
+- [Organizing the images](#organizing-the-images)
+
+<!-- markdown-toc end -->
+
 # Generating the SVG
 
 The Emacs Lisp code is used to help generate the SVG containing
