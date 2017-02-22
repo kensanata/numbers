@@ -4,6 +4,7 @@
 - [Generating the SVG](#generating-the-svg)
 - [Gathering the samples](#gathering-the-samples)
 - [Organizing the images](#organizing-the-images)
+- [Naming Conventions](#naming-conventions)
 
 <!-- markdown-toc end -->
 
