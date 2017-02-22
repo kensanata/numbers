@@ -110,3 +110,13 @@ n=0; for i in \
 	n=$(($n+1))
 done
 ```
+
+# Naming Conventions
+
+We want to add new people using the following naming schema: a unique
+number, the country of origin (where they are from, or currently
+living, or lived most of their lives,
+using
+[ISO 3166 Alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)),
+their age bracket (round to the nearest decade), and their sex (as
+self identified, using M, F, O, X, etc).
