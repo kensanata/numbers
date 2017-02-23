@@ -10,8 +10,8 @@
 
 # Generating the SVG
 
-The Emacs Lisp code is used to help generate the SVG containing
-20×30=600 random digits numbers in equal numbers
+The [Emacs Lisp code](create-svg.el) is used to help generate the SVG
+containing 20×30=600 random digits numbers in equal numbers
 ([random.svg](random.svg)).
 
 Then, all the lines containing the string "label" are flushed in order
