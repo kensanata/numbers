@@ -51,6 +51,12 @@ cropping is. Sometimes 10x10 is used.
 convert scan-000.png -crop "20x30@" -shave "7x7" +repage +adjoin number-%d.png
 ```
 
+Sometimes you might want to chop off a particular edge of the image.
+
+```
+convert scan-000.png -crop "20x30@" -shave "7x5" -chop 0x10+0+0 +repage +adjoin number-%d.png
+```
+
 This will give you image files from `number-0.png` to
 `number-599.png`.
 
