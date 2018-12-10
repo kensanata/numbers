@@ -25,7 +25,7 @@ naming scheme:
 1. four digits to identify the person
 2. an underscore character
 3. two letter country code ([ISO 3166 Alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)) or `XX` if unknown (e.g. Switzerland is `CH`)
-4. age, rounded to the nearest decade (e.g. 35 to 44 years is `4`) or `XX` if unknown
+4. age, rounded to the nearest decade (e.g. 35 to 44 years is `4`) or `X` if unknown
 5. sex (`M` for man, `F` for woman, `X` for unknown, `O` for other)
 
 # Set 2: automatic collection
