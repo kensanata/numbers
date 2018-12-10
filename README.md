@@ -7,7 +7,11 @@ the
 In Switzerland, the handwritten digites sometimes look a bit
 different, which is why we undertake this effort.
 
-There are two data sets in this repository.
+There are two data sets in this repository. They are described below.
+
+**Warning:** If you're using `git` on Windows to clone this
+repository, it make take a very long time because there are so many
+(tiny) files in it!
 
 # Set 1: manual collection
 
@@ -29,12 +33,16 @@ naming scheme:
 As part of a commercial project a neural network was trained on the
 numbers cut from a very large collection of documents. There are so
 many digits in this set that the data quality is lower than in the
-manual collection.
+manual collection. You can find this set in the
+[UNCATEGORIZED](UNCATEGORIZED/) directory. A bit over 800,000 digits!
 
 - digits may be miscategorized or malformed (e.g. [554](UNCATEGORIZED/4/number-0000554.PNG))
 - digits are both handwritten and printed (e.g. [552](UNCATEGORIZED/4/number-0000552.PNG))
 - the distribution of digits is not uniform
 - no information is avaible about the authors
+
+I'll be happy to take pull requests which fix miscategorized or
+malformed digits.
 
 As for the distribution of numbers:
 
