@@ -39,7 +39,7 @@ manual collection. You can find this set in the
 - digits may be miscategorized or malformed (e.g. [554](UNCATEGORIZED/4/number-0000554.PNG))
 - digits are both handwritten and printed (e.g. [552](UNCATEGORIZED/4/number-0000552.PNG))
 - the distribution of digits is not uniform
-- no information is avaible about the authors
+- no information is available about the authors
 
 I'll be happy to take pull requests which fix miscategorized or
 malformed digits.
